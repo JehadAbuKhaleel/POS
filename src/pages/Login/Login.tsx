@@ -10,7 +10,6 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState<string>('')
   const [hasError, setHasError] = useState<boolean>(false)
   const classes = useStyles()
-
   const handlePasswordOnChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value
     setPassword(value)

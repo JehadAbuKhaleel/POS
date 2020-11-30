@@ -1,7 +1,6 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Link } from 'react-router-dom'
-import './style.css'
 import useStyles from './styles'
 import {
   faPaperclip,
@@ -20,40 +19,42 @@ const Nav: React.FC = () => {
   return (
     <div className={classes.navbar}>
       <div className={classes.col1}>
-        <Link to="" className="active">
-          FBI<span className="spanText">POS</span>
+        <Link to="" className={classes.active + ' ' + classes.navLink}>
+          FBI<span className={classes.spanText}>POS</span>
         </Link>
       </div>
-      <Link to="">
+      <Link to="" className={classes.navLink}>
         <FontAwesomeIcon icon={faCreditCard} /> POS
       </Link>
-      <Link to="/home/products">
+      <Link to="/home/products" className={classes.navLink}>
         <FontAwesomeIcon icon={faArchive} /> Product
       </Link>
-      <Link to="">
+      <Link to="" className={classes.navLink}>
         <FontAwesomeIcon icon={faUsers} /> People
       </Link>
-      <Link to="">
+      <Link to="" className={classes.navLink}>
         <FontAwesomeIcon icon={faPaperclip} /> Sales
       </Link>
-      <Link to="">
+      <Link to="" className={classes.navLink}>
         <FontAwesomeIcon icon={faDollarSign} /> Expense
       </Link>
-      <Link to="">
+      <Link to="" className={classes.navLink}>
         <FontAwesomeIcon icon={faBookmark} /> Categories
       </Link>
-      <Link to="">
+      <Link to="" className={classes.navLink}>
         <FontAwesomeIcon icon={faCogs} /> Setting
       </Link>
-      <Link to="">
+      <Link to="" className={classes.navLink}>
         <FontAwesomeIcon icon={faChartLine} /> Reports
       </Link>
-      <Link to="" className="image">
-        <img src="IMG.JPG" /> admine Doe
-      </Link>
-      <Link to="">
-        <FontAwesomeIcon icon={faSignOutAlt} />
-      </Link>
+      <div className={classes.profile}>
+        <Link to="" className={classes.imageProfile}>
+          <img alt="profile" src="src/assets/images/image.jpg" /> admin Doe
+        </Link>
+        <Link to="" className={classes.signOut}>
+          <FontAwesomeIcon icon={faSignOutAlt} />
+        </Link>
+      </div>
     </div>
   )
 }

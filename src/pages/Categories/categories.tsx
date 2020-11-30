@@ -1,7 +1,7 @@
 import React from 'react'
 
-function Categorie() {
+function Categories() {
   return <h1>Welcome to the Categorie page!</h1>
 }
 
-export default Categorie
+export default Categories
